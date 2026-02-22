@@ -108,7 +108,7 @@
     /* ── HERO ── */
     .hero {
       max-width: 1040px; margin: 0 auto;
-      padding: 48px 20px 40px;
+      padding: 48px 20px 68px;
       display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;
     }
     .hero-avatar-wrap {
@@ -163,11 +163,6 @@
       border: 2px solid var(--accent);
     }
     .btn-outline:hover { background: var(--accent-l); }
-    .btn-white {
-      background: var(--white); color: var(--accent);
-      box-shadow: var(--shadow);
-    }
-    .btn-white:hover { background: var(--accent-l); }
 
     /* ── SECTION COMMONS ── */
     .section { padding: 56px 20px; }
@@ -182,22 +177,16 @@
     }
     .section-desc { font-size: .95rem; color: var(--muted); max-width: 480px; line-height: 1.7; }
 
-    /* ── STATS STRIP ── */
-    .stats-strip {
-      background: var(--accent); color: #fff;
+    /* ── LAYER TRANSITIONS ── */
+    .layer {
+      position: relative;
+      border-radius: 28px 28px 0 0;
+      margin-top: -28px;
     }
-    .stats-strip .section-inner {
-      display: flex; flex-wrap: wrap;
-      justify-content: center; gap: 0;
-    }
-    .stat-item {
-      display: flex; flex-direction: column; align-items: center;
-      padding: 24px 32px; gap: 2px;
-      border-right: 1px solid rgba(255,255,255,.2);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num { font-size: 2rem; font-weight: 800; line-height: 1; }
-    .stat-lbl { font-size: .8rem; opacity: .85; font-weight: 500; text-align: center; }
+    .layer-1 { background: var(--bg); z-index: 1; }
+    .layer-2 { background: var(--white); z-index: 2; }
+    .layer-3 { background: linear-gradient(170deg, var(--accent-l) 0%, var(--bg) 55%); z-index: 3; }
+    .layer-4 { background: var(--white); z-index: 4; }
 
     /* ── SERVICES ── */
     .services-grid {
@@ -217,7 +206,17 @@
     .service-desc { font-size: .875rem; color: var(--muted); line-height: 1.6; }
 
     /* ── PORTFOLIO ── */
-    .portfolio-section { background: var(--white); }
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+    /* First item spans full width on mobile — featured photo */
+    .posts-grid .portfolio-item:first-child {
+      grid-column: span 2;
+      aspect-ratio: 2 / 1;
+    }
+
     .portfolio-header {
       display: flex; align-items: flex-end;
       justify-content: space-between; gap: 16px;
@@ -260,20 +259,6 @@
     .pl-7  { background: linear-gradient(135deg,#fce4ec,#ce93d8); }
     .pl-8  { background: linear-gradient(135deg,#e8f5e9,#a5d6a7); }
     .pl-9  { background: linear-gradient(135deg,#fff3e0,#ffcc80); }
-
-    /* ── CTA SECTION ── */
-    .cta-section {
-      background: linear-gradient(135deg, var(--accent) 0%, #a83349 100%);
-      color: #fff; text-align: center;
-    }
-    .cta-section .section-inner {
-      display: flex; flex-direction: column; align-items: center; gap: 20px;
-    }
-    .cta-section .section-label { color: rgba(255,255,255,.7); }
-    .cta-section .section-title { color: #fff; }
-    .cta-section .section-desc  { color: rgba(255,255,255,.85); max-width: 440px; }
-    .cta-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    .cta-note { font-size: .82rem; opacity: .75; }
 
     /* ── CONTACT ── */
     .contact-grid {
@@ -320,7 +305,7 @@
 
     /* ── RESPONSIVE ── */
     @media (min-width: 640px) {
-      .hero { flex-direction: row; text-align: left; align-items: center; padding: 64px 20px 56px; }
+      .hero { flex-direction: row; text-align: left; align-items: center; padding: 64px 20px 80px; }
       .hero-badges { justify-content: flex-start; }
       .hero-cta { justify-content: flex-start; }
       .hero-avatar-wrap { width: 150px; height: 150px; flex-shrink: 0; }
@@ -329,13 +314,15 @@
     @media (min-width: 768px) {
       .nav-logo { font-size: 1.4rem; }
       .hero-avatar-wrap { width: 180px; height: 180px; }
-      .portfolio-grid { gap: 8px; }
+      .posts-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .posts-grid .portfolio-item:first-child {
+        grid-column: span 1;
+        aspect-ratio: 1;
+      }
     }
-    @media (max-width: 420px) {
-      .stat-item { padding: 20px 18px; }
-      .stat-num  { font-size: 1.6rem; }
-    }
-
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
   </style>
@@ -358,10 +345,9 @@
   <section class="hero" aria-label="Про майстра">
     <div class="hero-avatar-wrap" aria-hidden="true">
       <div class="hero-avatar">
-        <!-- Замініть на: <img src="img/avatar.jpg" alt="Майстер манікюру Kuznetsova Nails"> -->
-        💅
+        <img src="img/logo.webp"  alt="Майстер манікюру Kuznetsova Nails">
       </div>
-    </div>
+    </div>  
     <div class="hero-body">
       <h1 class="hero-title">Манікюр,<br>який <span>надихає</span></h1>
       <p class="hero-sub">
@@ -371,8 +357,8 @@
       <div class="hero-badges" aria-label="Ключові переваги">
         <span class="badge">LUXIO Гель-лак</span>
         <span class="badge">Педикюр</span>
+        <span class="badge">9+ років досвіду</span>
         <span class="badge">Оболонь, Київ</span>
-        <span class="badge">9 років досвіду</span>
       </div>
       <div class="hero-cta">
         <a href="https://ig.me/m/kuznetsovanails"
@@ -382,28 +368,15 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           Записатися в Instagram
         </a>
-        <a href="tel:+380936459634" class="btn btn-outline" aria-label="Подзвонити">
-          📞 Подзвонити
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- ══ STATS STRIP ══ -->
-  <div class="stats-strip" aria-label="Статистика">
-    <div class="section-inner">
-      <div class="stat-item"><span class="stat-num">9+</span><span class="stat-lbl">років у nail-індустрії</span></div>
-      <div class="stat-item"><span class="stat-num">1000+</span><span class="stat-lbl">задоволених клієнток</span></div>
-      <div class="stat-item"><span class="stat-num">247</span><span class="stat-lbl">робіт в портфоліо</span></div>
-      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-lbl">чисто та якісно</span></div>
-    </div>
-  </div>
-
   <!-- ══ SERVICES ══ -->
-  <section class="section" aria-label="Послуги">
+  <section class="section layer layer-1" aria-label="Послуги">
     <div class="section-inner">
       <p class="section-label">Послуги</p>
-      <h2 class="section-title">Що я роблю</h2>
+      <h2 class="section-title">Що ми робимо</h2>
       <p class="section-desc">Кожна процедура — з увагою до деталей і турботою про здоров'я Ваших нігтів.</p>
       <div class="services-grid">
         <article class="service-card">
@@ -431,12 +404,12 @@
   </section>
 
   <!-- ══ PORTFOLIO ══ -->
-  <section class="section portfolio-section" aria-label="Портфоліо робіт">
+  <section class="section layer layer-2" aria-label="Портфоліо робіт">
     <div class="section-inner">
       <div class="portfolio-header">
         <div>
           <p class="section-label">Портфоліо</p>
-          <h2 class="section-title">Мої роботи</h2>
+          <h2 class="section-title">Наші роботи</h2>
         </div>
         <a href="https://www.instagram.com/kuznetsovanails"
            class="btn btn-outline"
@@ -447,58 +420,58 @@
         </a>
       </div>
 
-      <div class="posts-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+      <div class="posts-grid">
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 1">
-          <!-- <img src="img/post1.jpg" alt="Манікюр LUXIO — робота 1" loading="lazy"> -->
+          <img src="img/1.webp" alt="Манікюр LUXIO — робота 1" loading="lazy">
           <div class="img-placeholder pl-1">💅</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 2">
-          <!-- <img src="img/post2.jpg" alt="Дизайн нігтів — робота 2" loading="lazy"> -->
+          <img src="img/2.webp" alt="Дизайн нігтів — робота 2" loading="lazy">
           <div class="img-placeholder pl-2">✨</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 3">
-          <!-- <img src="img/post3.jpg" alt="Nail art — робота 3" loading="lazy"> -->
+          <img src="img/3.webp" alt="Nail art — робота 3" loading="lazy">
           <div class="img-placeholder pl-3">🌸</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 4">
-          <!-- <img src="img/post4.jpg" alt="Педикюр — робота 4" loading="lazy"> -->
+          <img src="img/4.webp" alt="Педикюр — робота 4" loading="lazy">
           <div class="img-placeholder pl-4">🦋</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 5">
-          <!-- <img src="img/post5.jpg" alt="Манікюр — робота 5" loading="lazy"> -->
+          <img src="img/5.webp" alt="Манікюр — робота 5" loading="lazy">
           <div class="img-placeholder pl-5">🌺</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 6">
-          <!-- <img src="img/post6.jpg" alt="LUXIO покриття — робота 6" loading="lazy"> -->
+          <img src="img/6.webp" alt="LUXIO покриття — робота 6" loading="lazy">
           <div class="img-placeholder pl-6">💎</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 7">
-          <!-- <img src="img/post7.jpg" alt="Манікюр — робота 7" loading="lazy"> -->
+          <img src="img/7.webp" alt="Манікюр — робота 7" loading="lazy">
           <div class="img-placeholder pl-7">🌷</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 8">
-          <!-- <img src="img/post8.jpg" alt="Nail design — робота 8" loading="lazy"> -->
+          <img src="img/8.webp" alt="Nail design — робота 8" loading="lazy">
           <div class="img-placeholder pl-8">🪷</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 9">
-          <!-- <img src="img/post9.jpg" alt="Педикюр — робота 9" loading="lazy"> -->
+          <img src="img/9.webp" alt="Педикюр — робота 9" loading="lazy">
           <div class="img-placeholder pl-9">🌼</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
@@ -507,36 +480,13 @@
     </div>
   </section>
 
-  <!-- ══ CTA ══ -->
-  <section class="section cta-section" aria-label="Запис на процедуру">
-    <div class="section-inner">
-      <p class="section-label">Готові?</p>
-      <h2 class="section-title">Запишіться прямо зараз</h2>
-      <p class="section-desc">Надішліть повідомлення у Direct або зателефонуйте — відповідаю швидко 🌸</p>
-      <div class="cta-btns">
-        <a href="https://ig.me/m/kuznetsovanails"
-           class="btn btn-white"
-           target="_blank" rel="noopener noreferrer"
-           aria-label="Записатися через Instagram Direct">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          Написати в Direct
-        </a>
-        <a href="tel:+380936459634"
-           class="btn"
-           style="background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.5);"
-           aria-label="Зателефонувати +380 93 645 96 34">
-          📞 +380 93 645 96 34
-        </a>
-      </div>
-      <p class="cta-note">вул. Володимира Івасюка 8, корп. 8 · Оболонь, Київ</p>
-    </div>
-  </section>
-
   <!-- ══ CONTACTS ══ -->
-  <section class="section" id="contact" aria-label="Контакти та адреса">
+  <section class="section layer layer-3" id="contact" aria-label="Контакти та адреса">
     <div class="section-inner">
+
       <p class="section-label">Знайти нас</p>
       <h2 class="section-title">Контакти</h2>
+
       <div class="contact-grid">
 
         <div class="contact-card">
@@ -569,18 +519,17 @@
         <div class="contact-card">
           <div class="contact-card-icon" aria-hidden="true">🕐</div>
           <p class="contact-card-label">Графік роботи</p>
-          <p class="contact-card-value" style="font-size:.9rem;">Пн–Пт: 9:00–20:00</p>
-          <p class="contact-card-sub">Сб–Нд: 10:00–18:00</p>
+          <p class="contact-card-value" style="font-size:.9rem;">Пн–Нд: 9:00–21:00</p>
         </div>
 
-      </div>
+      </div><!-- /contact-grid -->
     </div>
   </section>
 
 </main>
 
 <!-- ══ FOOTER ══ -->
-<footer>
+<footer class="layer layer-4">
   <div class="footer-inner">
 
     <div class="footer-top">
