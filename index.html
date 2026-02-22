@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuznetsova Nails — Манікюр LUXIO • Педикюр • Оболонь, Київ</title>
+  <meta name="description" content="Kuznetsova Nails — манікюрний салон у серці Оболоні. Манікюр LUXIO, педикюр. 9 років у nail-індустрії. Чисто, якісно, з любов'ю. Запис: +380 93 645 96 34.">
+  <meta name="keywords" content="манікюр Оболонь, педикюр Київ, nail salon Оболонь, kuznetsova nails, манікюр LUXIO, нігті Київ">
+  <meta name="author" content="Kuznetsova Nails">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kuznetsovanails.github.io/">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="geo.region" content="UA-30">
+  <meta name="geo.placename" content="Kyiv">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kuznetsovanails.github.io/">
+  <meta property="og:title" content="Kuznetsova Nails — Манікюр LUXIO у Оболоні, Київ">
+  <meta property="og:description" content="Манікюрний салон у серці Оболоні. 9 років у nail-індустрії. Чисто, якісно, з любов'ю.">
+  <meta property="og:image" content="https://kuznetsovanails.github.io/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:site_name" content="Kuznetsova Nails">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kuznetsova Nails — Манікюр у Оболоні, Київ">
+  <meta name="twitter:description" content="Манікюрний салон. Манікюр LUXIO, педикюр. Оболонь, Київ.">
+  <meta name="twitter:image" content="https://kuznetsovanails.github.io/preview.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Kuznetsova Nails",
+    "alternateName": "Кузнецова Нейлс",
+    "description": "Манікюрний салон у серці Оболоні. Манікюр LUXIO, педикюр. 9 років у nail-індустрії.",
+    "url": "https://kuznetsovanails.github.io/",
+    "telephone": "+380936459634",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "вул. Володимира Івасюка 8, корпус 8",
+      "addressLocality": "Київ",
+      "addressRegion": "Київська область",
+      "postalCode": "04213",
+      "addressCountry": "UA"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 50.5126, "longitude": 30.4983 },
+    "hasMap": "https://maps.google.com/?q=50.5126,30.4983",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "18:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/kuznetsovanails"],
+    "image": "https://kuznetsovanails.github.io/preview.jpg"
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafafa; --white: #ffffff; --text: #0a0a0a; --muted: #737373;
+      --accent: #d63384; --accent-h: #b3126a; --border: #dbdbdb;
+      --insta: linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+      --font: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* HEADER */
+    header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-wrap { max-width: 935px; margin: 0 auto; padding: 0 16px; height: 54px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: -.5px; color: var(--text); }
+    .nav-tel { font-size: .85rem; font-weight: 600; color: var(--accent); }
+    .nav-tel:hover { color: var(--accent-h); text-decoration: underline; }
+
+    main { max-width: 935px; margin: 0 auto; }
+
+    /* PROFILE GRID — mobile-first */
+    .profile-section {
+      display: grid;
+      grid-template-areas: "avatar stats" "bio bio" "btns btns";
+      grid-template-columns: auto 1fr;
+      column-gap: 28px; row-gap: 0;
+      align-items: start;
+      padding: 20px 16px 8px;
+    }
+    .p-avatar        { grid-area: avatar; align-self: center; }
+    .p-stats-mobile  { grid-area: stats;  align-self: center; }
+    .p-username-row  { display: none; }
+    .p-stats-desktop { display: none; }
+    .p-bio           { grid-area: bio; padding-top: 12px; }
+    .p-btns-mobile   { grid-area: btns; }
+
+    /* Avatar */
+    .avatar-ring { width: 86px; height: 86px; border-radius: 50%; padding: 3px; background: var(--insta); display: flex; align-items: center; justify-content: center; }
+    .avatar-inner { width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg,#fce4ec,#f8bbd0,#f48fb1); border: 3px solid var(--white); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
+
+    /* Stats */
+    .stats-row { display: flex; justify-content: space-around; align-items: center; }
+    .stat-item { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+    .stat-num { font-size: 1rem; font-weight: 700; line-height: 1.2; }
+    .stat-lbl { font-size: .76rem; }
+
+    /* Bio */
+    .bio-name  { font-size: .9rem; font-weight: 700; margin-bottom: 2px; }
+    .bio-cat   { font-size: .8rem; color: var(--muted); margin-bottom: 6px; }
+    .bio-text  { font-size: .875rem; line-height: 1.55; margin-bottom: 6px; }
+    .bio-meta  { font-size: .82rem; color: var(--muted); display: flex; align-items: flex-start; gap: 4px; margin-top: 3px; }
+    .bio-meta a:hover { color: var(--text); }
+    .bio-phone { font-size: .9rem; font-weight: 700; display: flex; align-items: center; gap: 4px; margin-top: 5px; }
+    .bio-phone a { color: var(--accent); }
+    .bio-phone a:hover { text-decoration: underline; }
+
+    /* Mobile action buttons */
+    .p-btns-mobile { display: flex; gap: 8px; padding: 12px 0 4px; }
+    .p-btns-mobile .btn { flex: 1; }
+
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 7px 16px; border-radius: 8px; font-size: .875rem; font-weight: 600; cursor: pointer; border: none; transition: background .2s, transform .1s; text-decoration: none; white-space: nowrap; }
+    .btn:active { transform: scale(.98); }
+    .btn-pink { background: var(--accent); color: #fff; }
+    .btn-pink:hover { background: var(--accent-h); }
+    .btn-gray { background: #efefef; color: var(--text); }
+    .btn-gray:hover { background: #dbdbdb; }
+
+    /* HIGHLIGHTS */
+    .highlights-section { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 12px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .highlights-section::-webkit-scrollbar { display: none; }
+    .highlights-row { display: flex; gap: 14px; padding: 4px 16px; min-width: max-content; }
+    .hl-item { display: flex; flex-direction: column; align-items: center; gap: 5px; cursor: pointer; user-select: none; }
+    .hl-ring { width: 64px; height: 64px; border-radius: 50%; border: 1.5px solid var(--border); padding: 3px; background: var(--white); transition: transform .2s; }
+    .hl-item:hover .hl-ring { transform: scale(1.06); }
+    .hl-circle { width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; }
+    .hl-label { font-size: .72rem; text-align: center; max-width: 72px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .c-pink   { background: linear-gradient(135deg,#fce4ec,#f48fb1); }
+    .c-sky    { background: linear-gradient(135deg,#e3f2fd,#90caf9); }
+    .c-mint   { background: linear-gradient(135deg,#e0f7fa,#80deea); }
+    .c-peach  { background: linear-gradient(135deg,#fff3e0,#ffcc80); }
+    .c-lavend { background: linear-gradient(135deg,#f3e5f5,#ce93d8); }
+    .c-rose   { background: linear-gradient(135deg,#fce4ec,#e91e63); }
+    .c-green  { background: linear-gradient(135deg,#e8f5e9,#a5d6a7); }
+
+    /* POSTS TABS */
+    .posts-tabs { display: flex; border-top: 1px solid var(--border); }
+    .tab-btn { flex: 1; display: flex; align-items: center; justify-content: center; padding: 13px 0; background: none; border: none; border-top: 2px solid transparent; color: var(--muted); cursor: pointer; transition: color .2s, border-color .2s; }
+    .tab-btn.active { color: var(--text); border-top-color: var(--text); }
+    .tab-icon { width: 20px; height: 20px; }
+
+    /* POSTS GRID */
+    .posts-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; margin-bottom: 20px; }
+    .post { position: relative; aspect-ratio: 1; overflow: hidden; cursor: pointer; }
+    .post-bg { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; transition: transform .3s ease; }
+    .post:hover .post-bg { transform: scale(1.08); }
+    .post-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0); display: flex; align-items: center; justify-content: center; gap: 18px; color: #fff; font-size: .875rem; font-weight: 700; transition: background .3s; }
+    .post:hover .post-overlay { background: rgba(0,0,0,.28); }
+    .post-stat { opacity: 0; transition: opacity .3s; }
+    .post:hover .post-stat { opacity: 1; }
+    .pb1 { background: linear-gradient(135deg,#fce4ec,#f8bbd0,#f48fb1); }
+    .pb2 { background: linear-gradient(135deg,#e8eaf6,#c5cae9,#9fa8da); }
+    .pb3 { background: linear-gradient(135deg,#fffde7,#fff9c4,#fff176); }
+    .pb4 { background: linear-gradient(135deg,#fbe9e7,#ffccbc,#ffab91); }
+    .pb5 { background: linear-gradient(135deg,#e0f2f1,#b2dfdb,#80cbc4); }
+    .pb6 { background: linear-gradient(135deg,#f3e5f5,#e1bee7,#ce93d8); }
+    .pb7 { background: linear-gradient(135deg,#fce4ec,#e1bee7,#ce93d8); }
+    .pb8 { background: linear-gradient(135deg,#e8f5e9,#c8e6c9,#a5d6a7); }
+    .pb9 { background: linear-gradient(135deg,#fff3e0,#ffe0b2,#ffcc80); }
+
+    /* CONTACTS */
+    .contact-section { padding: 20px 16px 28px; border-top: 1px solid var(--border); }
+    .section-heading { font-size: .8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .contact-list { list-style: none; }
+    .contact-list li { display: flex; align-items: flex-start; gap: 10px; padding: 5px 0; font-size: .9rem; }
+    .c-icon { font-size: 1.1rem; flex-shrink: 0; padding-top: 1px; }
+    .contact-list a:hover { color: var(--accent); }
+    .phone-big { font-size: 1.15rem; font-weight: 700; }
+    .phone-big a { color: var(--accent); }
+    .phone-big a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer { background: var(--white); border-top: 1px solid var(--border); }
+    .footer-wrap { max-width: 935px; margin: 0 auto; padding: 24px 16px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 12px; }
+    .footer-links a { font-size: .78rem; color: var(--muted); }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: .75rem; color: var(--muted); margin-bottom: 28px; }
+
+    /* PRIVACY */
+    .privacy-section { border-top: 1px solid #efefef; padding-top: 24px; }
+    .privacy-section h2 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .privacy-date { font-size: .78rem; color: var(--muted); font-style: italic; margin-bottom: 16px; }
+    .privacy-body { font-size: .82rem; color: var(--muted); line-height: 1.75; }
+    .privacy-body h3 { font-size: .86rem; font-weight: 700; color: var(--text); margin: 18px 0 5px; }
+    .privacy-body p { margin-bottom: 8px; }
+    .privacy-body a { color: var(--accent); }
+    .privacy-body a:hover { text-decoration: underline; }
+
+    /* DESKTOP */
+    @media (min-width: 768px) {
+      .nav-wrap { padding: 0 24px; height: 60px; }
+      .nav-logo { font-size: 1.75rem; }
+
+      .profile-section {
+        grid-template-areas: "avatar username-row" "avatar stats-desk" "avatar bio-desk";
+        grid-template-columns: 200px 1fr;
+        column-gap: 52px; row-gap: 14px;
+        padding: 44px 24px 28px;
+      }
+      .p-avatar { grid-area: avatar; align-self: start; display: flex; justify-content: center; padding-top: 8px; }
+      .avatar-ring { width: 150px; height: 150px; padding: 4px; }
+      .avatar-inner { font-size: 4rem; border-width: 4px; }
+      .p-stats-mobile { display: none; }
+      .p-btns-mobile  { display: none; }
+      .p-username-row { grid-area: username-row; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+      .username-text  { font-size: 1.4rem; font-weight: 300; }
+      .btn-row-desk   { display: flex; gap: 8px; }
+      .p-stats-desktop { grid-area: stats-desk; display: flex; gap: 36px; }
+      .p-stats-desktop .stat-item { flex-direction: row; gap: 5px; align-items: baseline; }
+      .p-stats-desktop .stat-lbl  { font-size: .9rem; }
+      .p-bio { grid-area: bio-desk; padding-top: 0; }
+      .bio-name { font-size: .95rem; }
+
+      .highlights-row { padding: 4px 24px; gap: 18px; }
+      .hl-ring   { width: 77px; height: 77px; }
+      .hl-circle { font-size: 2rem; }
+      .hl-label  { font-size: .75rem; }
+      .posts-grid { margin-bottom: 32px; }
+      .contact-section { padding: 24px 24px 32px; }
+      .footer-wrap { padding: 24px; }
+    }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav-wrap" aria-label="Головна навігація">
+    <a href="/" class="nav-logo">Kuznetsova Nails</a>
+    <a href="tel:+380936459634" class="nav-tel" aria-label="Зателефонувати">📞 +380 93 645 96 34</a>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <section class="profile-section" aria-label="Профіль майстра манікюру">
+
+    <!-- 1. Avatar -->
+    <div class="p-avatar">
+      <div class="avatar-ring">
+        <div class="avatar-inner" role="img" aria-label="Аватар — Kuznetsova Nails">💅</div>
+      </div>
+    </div>
+
+    <!-- 2. Mobile stats -->
+    <div class="p-stats-mobile stats-row" role="list" aria-label="Статистика профілю">
+      <div class="stat-item" role="listitem"><span class="stat-num">247</span><span class="stat-lbl">публікацій</span></div>
+      <div class="stat-item" role="listitem"><span class="stat-num">4&thinsp;821</span><span class="stat-lbl">підписників</span></div>
+      <div class="stat-item" role="listitem"><span class="stat-num">312</span><span class="stat-lbl">підписок</span></div>
+    </div>
+
+    <!-- 3. Desktop: username + action buttons -->
+    <div class="p-username-row">
+      <span class="username-text">kuznetsovanails</span>
+      <div class="btn-row-desk">
+        <a href="https://ig.me/m/kuznetsovanails" class="btn btn-pink" target="_blank" rel="noopener noreferrer" aria-label="Записатися у Direct Instagram">💌 Записатися у Direct</a>
+        <a href="tel:+380936459634" class="btn btn-gray" aria-label="Подзвонити">📞 Подзвонити</a>
+      </div>
+    </div>
+
+    <!-- 4. Desktop stats -->
+    <div class="p-stats-desktop" role="list" aria-label="Статистика профілю">
+      <div class="stat-item" role="listitem"><span class="stat-num">247</span><span class="stat-lbl">публікацій</span></div>
+      <div class="stat-item" role="listitem"><span class="stat-num">4&thinsp;821</span><span class="stat-lbl">підписників</span></div>
+      <div class="stat-item" role="listitem"><span class="stat-num">312</span><span class="stat-lbl">підписок</span></div>
+    </div>
+
+    <!-- 5. Bio -->
+    <div class="p-bio">
+      <p class="bio-name">Kuznetsova Nails 💅</p>
+      <p class="bio-cat">Nail-майстер · Б'юті-салон</p>
+      <div class="bio-text">
+        Манікюр LUXIO • Педикюр • Оболонь<br>
+        Манікюрний салон у серці Оболоні<br>
+        9 років у nail-індустрії 🌸<br>
+        Чисто, якісно, з любов'ю 💕
+      </div>
+      <p class="bio-meta">
+        <span aria-hidden="true">📍</span>
+        <a href="https://maps.google.com/?q=Kyiv+Obolon+Volodymyra+Ivasiuka+8" target="_blank" rel="noopener noreferrer">вул. Володимира Івасюка 8, корп. 8, Київ</a>
+      </p>
+      <p class="bio-phone">
+        <span aria-hidden="true">📞</span>
+        <a href="tel:+380936459634">+380 93 645 96 34</a>
+      </p>
+    </div>
+
+    <!-- 6. Mobile action buttons -->
+    <div class="p-btns-mobile" role="group" aria-label="Дії">
+      <a href="https://ig.me/m/kuznetsovanails" class="btn btn-pink" target="_blank" rel="noopener noreferrer">💌 Записатися у Direct</a>
+      <a href="tel:+380936459634" class="btn btn-gray">📞 Подзвонити</a>
+    </div>
+
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights-section" aria-label="Актуальне (Highlights)">
+    <div class="highlights-row" role="list">
+      <div class="hl-item" role="listitem" tabindex="0"><div class="hl-ring"><div class="hl-circle c-pink">👑</div></div><span class="hl-label">Карина</span></div>
+      <div class="hl-item" role="listitem" tabindex="0"><div class="hl-ring"><div class="hl-circle c-sky">💅</div></div><span class="hl-label">Ві</span></div>
+      <div class="hl-item" role="listitem" tabindex="0"><div class="hl-ring"><div class="hl-circle c-mint">🏠</div></div><span class="hl-label">Салон</span></div>
+      <div class="hl-item" role="listitem" tabindex="0"><div class="hl-ring"><div class="hl-circle c-peach">🌸</div></div><span class="hl-label">Mood nails</span></div>
+      <div class="hl-item" role="listitem" tabindex="0"><div class="hl-ring"><div class="hl-circle c-lavend">✨</div></div><span class="hl-label">LUXIO</span></div>
+      <div class="hl-item" role="listitem" tabindex="0"><div class="hl-ring"><div class="hl-circle c-rose">🦋</div></div><span class="hl-label">Педикюр</span></div>
+      <div class="hl-item" role="listitem" tabindex="0"><div class="hl-ring"><div class="hl-circle c-green">⭐</div></div><span class="hl-label">Відгуки</span></div>
+    </div>
+  </section>
+
+  <!-- POSTS TABS -->
+  <div class="posts-tabs" role="tablist" aria-label="Вкладки публікацій">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="posts-grid" id="tab-posts">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx=".5"/><rect x="14" y="3" width="7" height="7" rx=".5"/><rect x="3" y="14" width="7" height="7" rx=".5"/><rect x="14" y="14" width="7" height="7" rx=".5"/></svg>
+      <span class="sr-only">Публікації</span>
+    </button>
+    <button class="tab-btn" role="tab" aria-selected="false" id="tab-reels">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      <span class="sr-only">Reels</span>
+    </button>
+    <button class="tab-btn" role="tab" aria-selected="false" id="tab-tagged">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      <span class="sr-only">Відмітки</span>
+    </button>
+  </div>
+
+  <!-- POSTS GRID -->
+  <section id="posts-grid" role="tabpanel" aria-labelledby="tab-posts" aria-label="Галерея робіт">
+    <div class="posts-grid">
+      <article class="post" tabindex="0" aria-label="Манікюр LUXIO — робота 1"><div class="post-bg pb1">💅</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 124</span></div></article>
+      <article class="post" tabindex="0" aria-label="Дизайн нігтів — робота 2"><div class="post-bg pb2">✨</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 98</span></div></article>
+      <article class="post" tabindex="0" aria-label="Nail art — робота 3"><div class="post-bg pb3">🌸</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 203</span></div></article>
+      <article class="post" tabindex="0" aria-label="Педикюр — робота 4"><div class="post-bg pb4">🦋</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 87</span></div></article>
+      <article class="post" tabindex="0" aria-label="Манікюр — робота 5"><div class="post-bg pb5">🌺</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 156</span></div></article>
+      <article class="post" tabindex="0" aria-label="LUXIO покриття — робота 6"><div class="post-bg pb6">💎</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 211</span></div></article>
+      <article class="post" tabindex="0" aria-label="Манікюр — робота 7"><div class="post-bg pb7">🌷</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 143</span></div></article>
+      <article class="post" tabindex="0" aria-label="Nail design — робота 8"><div class="post-bg pb8">🪷</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 178</span></div></article>
+      <article class="post" tabindex="0" aria-label="Педикюр — робота 9"><div class="post-bg pb9">🌼</div><div class="post-overlay" aria-hidden="true"><span class="post-stat">♥ 92</span></div></article>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="contact-section" id="contact" aria-label="Контактна інформація">
+    <h2 class="section-heading">Контакти</h2>
+    <ul class="contact-list">
+      <li>
+        <span class="c-icon" aria-hidden="true">📞</span>
+        <div>
+          <p class="phone-big"><a href="tel:+380936459634">+380 93 645 96 34</a></p>
+          <small style="color:var(--muted)">Viber · WhatsApp · Телефон</small>
+        </div>
+      </li>
+      <li>
+        <span class="c-icon" aria-hidden="true">📍</span>
+        <div>
+          <a href="https://maps.google.com/?q=Kyiv+Obolon+Volodymyra+Ivasiuka+8" target="_blank" rel="noopener noreferrer">
+            вул. Володимира Івасюка 8, корп. 8<br>
+            <small style="color:var(--muted)">Оболонь, Київ, Україна</small>
+          </a>
+        </div>
+      </li>
+      <li>
+        <span class="c-icon" aria-hidden="true">📸</span>
+        <a href="https://www.instagram.com/kuznetsovanails" target="_blank" rel="noopener noreferrer">@kuznetsovanails</a>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-wrap">
+
+    <nav class="footer-links" aria-label="Посилання підвалу">
+      <a href="#privacy">Політика конфіденційності</a>
+      <a href="#contact">Контакти</a>
+      <a href="https://www.instagram.com/kuznetsovanails" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="tel:+380936459634">+380 93 645 96 34</a>
+    </nav>
+
+    <p class="footer-copy">© 2023–2025 Kuznetsova Nails. Усі права захищені. Київ, Оболонь, Україна.</p>
+
+    <section class="privacy-section" id="privacy" aria-label="Політика конфіденційності">
+      <h2>Політика конфіденційності</h2>
+      <p class="privacy-date">Дата набрання чинності: 1 вересня 2023 р. | Остання редакція: 22 лютого 2025 р.</p>
+      <div class="privacy-body">
+
+        <h3>1. Загальні положення</h3>
+        <p>Цей веб-сайт (далі — «Сайт») є власністю приватного майстра манікюру та педикюру, що діє під торговою назвою <strong>Kuznetsova Nails</strong> (далі — «Майстер»). Майстер зобов'язується захищати персональні дані відвідувачів і клієнтів відповідно до Закону України «Про захист персональних даних» від 01.06.2010 № 2297-VI та Регламенту ЄС 2016/679 (GDPR) у частині, що застосовується.</p>
+
+        <h3>2. Збір та категорії персональних даних</h3>
+        <p>Майстер може обробляти такі персональні дані:<br>
+        а) <strong>Надані добровільно:</strong> ім'я, номер телефону — при записі через Instagram Direct або телефоном;<br>
+        б) <strong>Технічні дані:</strong> IP-адреса, тип браузера, дата й час відвідування — автоматично збираються сервером <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.<br>
+        Сайт не використовує власні cookie, рекламні трекери або скрипти аналітики третіх сторін.</p>
+
+        <h3>3. Мета та правова підстава обробки</h3>
+        <p>Персональні дані обробляються виключно для: організації та надання послуг манікюру й педикюру; надсилання нагадувань про візит (за Вашим запитом); відповіді на звернення. Правова підстава: виконання договору (ст. 6(1)(b) GDPR) та добровільна згода (ст. 6(1)(a) GDPR).</p>
+
+        <h3>4. Передача даних третім особам</h3>
+        <p>Майстер не продає та не розкриває персональні дані клієнтів третім особам, за винятком випадків, прямо передбачених законодавством України.</p>
+
+        <h3>5. Строки зберігання</h3>
+        <p>Контактні дані клієнтів зберігаються не довше ніж 3 (три) роки з моменту останнього візиту, після чого підлягають безповоротному знищенню.</p>
+
+        <h3>6. Права суб'єкта персональних даних</h3>
+        <p>Ви маєте право: отримати доступ до своїх даних; вимагати їх виправлення або видалення; відкликати згоду в будь-який момент; подати скаргу до Уповноваженого Верховної Ради України з прав людини. Для реалізації прав звертайтесь: <a href="tel:+380936459634"><strong>+380 93 645 96 34</strong></a>.</p>
+
+        <h3>7. Безпека даних</h3>
+        <p>Майстер вживає розумних технічних та організаційних заходів для захисту персональних даних від несанкціонованого доступу, втрати або розголошення. Доступ до даних клієнтів має виключно Майстер.</p>
+
+        <h3>8. Зміни до Політики</h3>
+        <p>Актуальна версія Політики завжди доступна на цій сторінці. Продовження використання Сайту після публікації змін вважається Вашою згодою з оновленою Політикою.</p>
+
+        <h3>9. Контакти відповідального</h3>
+        <p>
+          📞 <a href="tel:+380936459634"><strong>+380 93 645 96 34</strong></a><br>
+          📍 вул. Володимира Івасюка 8, корп. 8, Київ, Україна<br>
+          📸 <a href="https://www.instagram.com/kuznetsovanails" target="_blank" rel="noopener noreferrer">@kuznetsovanails</a>
+        </p>
+
+      </div>
+    </section>
+
+  </div>
+</footer>
+
+</body>
+</html>
