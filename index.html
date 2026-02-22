@@ -9,6 +9,9 @@
   <meta name="author" content="Kuznetsova Nails">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kuznetsovanails.co.ua/">
+
+  <!-- Preload LCP image (hero avatar) — critical for FCP/LCP score -->
+  <link rel="preload" as="image" href="img/logo.webp" type="image/webp" fetchpriority="high">
   <link rel="alternate" hreflang="uk" href="https://kuznetsovanails.co.ua/">
   <link rel="alternate" hreflang="x-default" href="https://kuznetsovanails.co.ua/">
 
@@ -364,7 +367,7 @@
   <section class="hero" aria-label="Про майстра">
     <div class="hero-avatar-wrap" aria-hidden="true">
       <div class="hero-avatar">
-        <img src="img/logo.webp"  alt="Майстер манікюру Kuznetsova Nails">
+        <img src="img/logo.webp" alt="Майстер манікюру Kuznetsova Nails" width="180" height="180" fetchpriority="high" decoding="sync">
       </div>
     </div>  
     <div class="hero-body">
@@ -442,55 +445,55 @@
       <div class="posts-grid">
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 1">
-          <img src="img/1.webp" alt="Манікюр LUXIO — робота 1" loading="lazy">
+          <img src="img/1.webp" alt="Манікюр LUXIO — робота 1" loading="lazy" decoding="async" width="600" height="400">
           <div class="img-placeholder pl-1">💅</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 2">
-          <img src="img/2.webp" alt="Дизайн нігтів — робота 2" loading="lazy">
+          <img src="img/2.webp" alt="Дизайн нігтів — робота 2" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-2">✨</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 3">
-          <img src="img/3.webp" alt="Nail art — робота 3" loading="lazy">
+          <img src="img/3.webp" alt="Nail art — робота 3" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-3">🌸</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 4">
-          <img src="img/4.webp" alt="Педикюр — робота 4" loading="lazy">
+          <img src="img/4.webp" alt="Педикюр — робота 4" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-4">🦋</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 5">
-          <img src="img/5.webp" alt="Манікюр — робота 5" loading="lazy">
+          <img src="img/5.webp" alt="Манікюр — робота 5" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-5">🌺</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 6">
-          <img src="img/6.webp" alt="LUXIO покриття — робота 6" loading="lazy">
+          <img src="img/6.webp" alt="LUXIO покриття — робота 6" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-6">💎</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 7">
-          <img src="img/7.webp" alt="Манікюр — робота 7" loading="lazy">
+          <img src="img/7.webp" alt="Манікюр — робота 7" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-7">🌷</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 8">
-          <img src="img/8.webp" alt="Nail design — робота 8" loading="lazy">
+          <img src="img/8.webp" alt="Nail design — робота 8" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-8">🪷</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
 
         <article class="portfolio-item" tabindex="0" aria-label="Робота 9">
-          <img src="img/9.webp" alt="Педикюр — робота 9" loading="lazy">
+          <img src="img/9.webp" alt="Педикюр — робота 9" loading="lazy" decoding="async" width="600" height="600">
           <div class="img-placeholder pl-9">🌼</div>
           <div class="portfolio-overlay" aria-hidden="true"></div>
         </article>
